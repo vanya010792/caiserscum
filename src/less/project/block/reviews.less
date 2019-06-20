@@ -1,0 +1,133 @@
+.cc-reviews {
+  &__wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  &__review {
+    width: 45%;
+    border: 1px solid @C-borderGray;
+    padding: 47px 10px 35px 10px;
+    &_wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+      height: 100%;
+      margin-top: -27px;
+    }
+  }
+  &__legend {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: @FW-Bold;
+    color: @C-red;
+    padding: 0 25px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__list {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid @C-borderGray;
+    margin-bottom: 40px;
+  }
+  &__item {
+    max-width: 290px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 2px;
+      background: linear-gradient( left, transparent 0%, @C-red 50%, transparent 100% );
+      left: 20%;
+      bottom: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    color: @C-textGray;
+    margin-bottom: 5px;
+    & p {
+      height: 10px;
+    }
+  }
+  &__stars {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 5px;
+    & span {
+      width: 10px;
+      height: 10px;
+      margin-right: 3px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        background-image: url(../img/icon-star-active.svg);
+      }
+      &.disable {
+        background-image: url(../img/icon-star-disable.svg);
+      }
+    }
+  }
+  &__desc {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & p {
+      font-size: 11px;
+      color: @C-textGray;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      & img {
+        width: 16px;
+        margin-right: 5px;
+      }
+    }
+    & a {
+      color: @C-blue;
+      font-weight: @FW-Bold;
+      font-size: 13px;
+      &:hover {
+        color: @C-textGray;
+      }
+    }
+  }
+  &__btn {
+    width: 100%;
+    & .cc-btn {
+      width: 100%;
+    }
+  }
+}

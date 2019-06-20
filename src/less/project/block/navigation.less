@@ -1,0 +1,64 @@
+.cc-navigation {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 55px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid @C-borderGray;
+  }
+  &__name {
+    font-size: 24px;
+    color: @C-textBlack;
+    font-weight: @FW-Bold;
+    text-transform: uppercase;
+    &:hover {
+      color: @C-blue;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & a {
+      color: @C-textGray;
+      font-size: 14px;
+      padding: 0 20px;
+      font-weight: @FW-Medium;
+      &:hover {
+        color: @C-red;
+      }
+      &.active {
+        color: @C-red;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+  }
+}
+.cc-panel-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  & a {
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: @FW-Medium;
+    color: @C-textGray;
+    border: 1px solid @C-borderGray;
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding: 13px;
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      border: 1px solid #ffffff;
+      box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.10);
+    }
+  }
+}

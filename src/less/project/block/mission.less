@@ -1,0 +1,38 @@
+.cc-mission {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__img {
+    width: 43%;
+    margin-left: -150px;
+  }
+  &__desc {
+    width: 57%;
+    font-size: 20px;
+    color: @C-textGray;
+    line-height: 1.8;
+    & p {
+      position: relative;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50%;
+        height: 2px;
+        background: linear-gradient( left, transparent 0%, @C-borderGray 30%, @C-borderGray 70%, transparent 100% );
+      }
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
