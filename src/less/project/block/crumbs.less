@@ -1,0 +1,47 @@
+.cc-crumbs {
+  background-color: #f4f4f4;
+  border-bottom: 1px solid @C-borderGray;
+  padding: 50px 0 35px 0;
+  margin-bottom: 30px;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    font-size: 20px;
+    color: @C-red;
+    & h2 {
+      font-size: 14px;
+      color: @C-textGray;
+      margin-top: 15px;
+      font-weight: @FW-Light;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__text {
+    font-size: 13px;
+    color: @C-textGray;
+    font-weight: @FW-Medium;
+  }
+  &__link {
+    font-size: 13px;
+    color: @C-red;
+    margin-left: 4px;
+    font-weight: @FW-Bold;
+    &:hover {
+      color: @C-blue;
+    }
+  }
+  &__separator {
+    font-size: 11px;
+    font-weight: @FW-Bold;
+    margin: 0 10px;
+    color: @C-textGray;
+  }
+}

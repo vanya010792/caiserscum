@@ -172,3 +172,61 @@
     }
   }
 }
+.cc-content {
+  &>p {
+    font-size: 16px;
+    color: @C-textBlack;
+    font-weight: @FW-Medium;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &>img {
+    float: left;
+    width: 50%;
+    padding: 0 50px 40px 0;
+  }
+  &>blockquote {
+    padding: 20px;
+    border: 1px solid @C-borderGray;
+    margin-bottom: 30px;
+    position: relative;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 50%;
+      background-color: #ffffff;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    &::before {
+      left: -1px;
+    }
+    &::after {
+      right: -1px;
+    }
+    & p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+      font-size: 18px;
+      color: @C-textGray;
+      & span {
+        &:first-child {
+          flex: 0 0 35px;
+          & img {
+            display: inline-block;
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+}

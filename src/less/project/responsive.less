@@ -1,4 +1,4 @@
-@media ( max-width: 1024px ) {
+@media ( max-width: 1367px ) {
   .cc-block {
     margin-bottom: 60px;
   }
@@ -268,6 +268,37 @@
       padding: 12px;
     }
   }
+  .cc-crumbs {
+    padding: 40px 0 25px 0;
+    margin-bottom: 20px;
+    &__wrap {
+      flex-wrap: wrap;
+    }
+    &__title {
+      width: 100%;
+      text-align: center;
+    }
+    &__nav {
+      width: 100%;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+  .cc-content {
+    &>p {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    &>img {
+      padding: 0 30px 20px 0;
+    }
+    &>blockquote {
+      margin-bottom: 20px;
+      & p {
+        font-size: 16px;
+      }
+    }
+  }
 }
 @media ( max-width: 640px ) {
   .cc-block {
@@ -484,6 +515,44 @@
       & .cc-btn {
         width: 100%;
       }
+    }
+  }
+  .cc-content {
+    &>p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    &>img {
+      display: inline-block;
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin: 10px 0;
+    }
+    &>blockquote {
+      margin-bottom: 10px;
+      & p {
+        font-size: 15px;
+      }
+    }
+  }
+  .cc-crumbs {
+    padding: 30px 0 15px 0;
+    margin-bottom: 10px;
+    &__title {
+      font-size: 17px;
+      & h2 {
+        font-size: 13px;
+      }
+    }
+    &__text {
+      font-size: 11px;
+    }
+    &__link {
+      font-size: 11px;
+    }
+    &__separator {
+      font-size: 10px;
     }
   }
 }
