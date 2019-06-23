@@ -3,6 +3,7 @@
   &__line {
     height: 2px;
     background: linear-gradient( left, transparent 0%, #e12021 50%, transparent 100% );
+    background: -ms-linear-gradient( left, transparent 0%, #e12021 50%, transparent 100% );
   }
   &__wrap {
     display: inline-block;
@@ -12,17 +13,18 @@
     border-bottom: 10px solid #8d0e0e;
     padding: 40px 80px;
     background: linear-gradient( bottom, rgb(236,13,14) 0%, rgb(236,13,14) 58%, rgb(246,88,7) 83%, rgb(255,162,0) 100% );
+    background: -ms-linear-gradient( bottom, rgb(236,13,14) 0%, rgb(236,13,14) 58%, rgb(246,88,7) 83%, rgb(255,162,0) 100% );
   }
   &__desc {
     height: 130px;
     text-transform: uppercase;
-    color: #ffffff;
     font-weight: @FW-Bold;
   }
   &__fieldset {
     & legend {
       text-align: center;
       padding: 0 20px;
+      color: #ffffff;
     }
     &--top {
       font-size: 24px;

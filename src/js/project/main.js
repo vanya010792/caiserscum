@@ -47,4 +47,21 @@ document.addEventListener( 'DOMContentLoaded', function () {
         }
     });
 
+    $( '.cc-faq__title' ).click( function () {
+        if( $(this).hasClass( 'cc-faq__title--active' ) ) {
+            $(this).siblings('.cc-faq__desc').slideUp();
+            $(this).removeClass( 'cc-faq__title--active' );
+        } else {
+            $(this).siblings('.cc-faq__desc').slideDown();
+            $(this).addClass( 'cc-faq__title--active' );
+        }
+    });
+
+    $( '.cc-success-review' ).click( function () {
+        $( this ).toggleClass('cc-success-review--active');
+    });
+    $( '.cc-widget' ).click( function () {
+        $( this ).toggleClass('cc-widget--active');
+    });
+
 });
