@@ -1,0 +1,66 @@
+.cc-filter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  &__title {
+    font-size: 18px;
+    font-weight: @FW-Bold;
+    color: @C-blue;
+    text-transform: uppercase;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin-left: 40px;
+    padding-right: 20px;
+    position: relative;
+    color: @C-textGray;
+    font-weight: @FW-Bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+    &::before, &::after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 2px;
+      background-color: @C-textGray;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transition: .3s;
+    }
+    &::before {
+      right: 0;
+      transform: rotate(-45deg);
+    }
+    &::after {
+      right: 6px;
+      transform: rotate(45deg);
+    }
+  }
+  &__down {
+    color: @C-red;
+    &::before, &::after {
+      background-color: @C-red;
+    }
+  }
+  &__up {
+    color: @C-red;
+    &::before, &::after {
+      background-color: @C-red;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
