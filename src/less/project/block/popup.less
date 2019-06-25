@@ -200,7 +200,7 @@
 .cc-widget {
   position: fixed;
   right: -300px;
-  top: 50px;
+  top: 100px;
   height: 90px;
   transition: .5s;
   padding: 5px 20px;
@@ -209,9 +209,8 @@
   justify-content: space-between;
   align-items: center;
   width: 280px;
-  z-index: 99;
   background-color: #ffffff;
-  box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   cursor: pointer;
   &--active {
     right: 0;
@@ -220,18 +219,22 @@
     font-size: 16px;
     font-weight: @FW-Bold;
     color: @C-red;
+    width: 49%;
+    text-align: center;
   }
   &__data {
+    width: 49%;
+    text-align: center;
     font-weight: @FW-Light;
     color: @C-textGray;
   }
 }
 .cc-success-review {
   position: fixed;
-  top: 150px;
+  top: 200px;
   right: 0;
   background-color: #ffffff;
-  box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   height: 90px;
   transition: .5s;
   padding: 5px 20px;

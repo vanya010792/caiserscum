@@ -2,7 +2,7 @@
   &__wrap {
     display: flex;
     justify-content: space-around;
-    align-items: stretch;
+    align-items: flex-start;
   }
   &__review {
     width: 45%;
@@ -16,7 +16,6 @@
       max-width: 400px;
       width: 100%;
       margin: 0 auto;
-      height: 100%;
       margin-top: -27px;
     }
   }
@@ -37,6 +36,10 @@
     padding: 20px;
     border: 1px solid @C-borderGray;
     margin-bottom: 40px;
+    background-color: #ffffff;
+    &--2 {
+      display: none;
+    }
   }
   &__item {
     max-width: 290px;
@@ -129,6 +132,9 @@
     width: 100%;
     & .cc-btn {
       width: 100%;
+    }
+    &--2 {
+      display: none;
     }
   }
 }

@@ -3,11 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 55px;
-    margin-bottom: 45px;
-    border-bottom: 1px solid @C-borderGray;
+    padding-top: 55px;
+    margin-top: 45px;
+    border-top: 1px solid @C-borderGray;
   }
   &__name {
+    display: block;
+    text-align: center;
     font-size: 24px;
     color: @C-textBlack;
     font-weight: @FW-Bold;
@@ -18,13 +20,17 @@
   }
   &__nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
     & a {
+      width: 100%;
       color: @C-textGray;
       font-size: 14px;
-      padding: 0 20px;
+      padding: 10px 0 10px 20px;
       font-weight: @FW-Medium;
+      text-align: right;
       &:hover {
         color: @C-red;
       }
@@ -40,8 +46,12 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 200px;
+  min-width: 120px;
+  width: 100%;
   & a {
-    margin-right: 20px;
+    width: 100%;
     font-size: 16px;
     font-weight: @FW-Medium;
     color: @C-textGray;
@@ -49,13 +59,9 @@
     border-radius: 3px;
     text-transform: uppercase;
     padding: 13px;
-    max-width: 200px;
-    width: 100%;
     text-align: center;
     background-color: #ffffff;
-    &:last-child {
-      margin-right: 0;
-    }
+    margin-bottom: 20px;
     &:hover {
       border: 1px solid #ffffff;
       box-shadow: 0 6px 20px 3px rgba(0, 0, 0, 0.10);

@@ -1,5 +1,4 @@
 document.addEventListener( 'DOMContentLoaded', function () {
-
     $( ".anchor" ).on("click", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
@@ -60,8 +59,86 @@ document.addEventListener( 'DOMContentLoaded', function () {
     $( '.cc-success-review' ).click( function () {
         $( this ).toggleClass('cc-success-review--active');
     });
-    $( '.cc-widget' ).click( function () {
-        $( this ).toggleClass('cc-widget--active');
-    });
 
+    if( document.querySelector( '.cc-reviews__btn--1' ) ) {
+        $( '.cc-reviews__btn--1' ).click( function (e) {
+            e.preventDefault();
+            $( this ).fadeOut();
+            $( this ).siblings( '.cc-reviews__list--2' ).slideDown();
+            $( this ).siblings( '.cc-reviews__btn--2' ).fadeIn();
+        });
+    }
+
+    const NAME_MALE = [
+        "Liam", "Lucas", "Jackson", "Aiden", "Henry", "Wyatt", "Nathan", "Noah", "Oliver", "Jacob",
+        "Elijah", "Matthew", "Caleb", "Mason", "Alexander", "James", "Benjamin", "Jayden", "Ethan", "Jack",
+        "Luke", "William", "Michael", "Ryan", "Logan", "Owen", "Daniel", "Carter", "Gabriel", "Isaac", "Alexander"
+    ];
+    const NAME_FEMALE = [
+        "Emma", "Emily", "Amelia", "Charlotte", "Mia", "Isabella", "Sophia", "Olivia", "Ava",
+        "Madison", "Sofia", "Evelyn", "Chloe", "Ella", "Lily", "Avery", "Abigail", "Harper", "Grace",
+        "Aria", "Nora", "Elizabeth", "Zoe", "Addison", "Grace", "Audrey", "Hannah", "Zoey", "Scarlett", "Aubrey", "Ellie"
+    ];
+    const NICK_NAME = [
+        "Alpha", "Beast", "Commando", "Crash test", "Dragon", "Gutsy heart", "Help bringer", "Warrior", "Brunette", "Cuddlies",
+        "Free butterfly", "Little monster", "Raspberry", "Runaway bride", "Sweet cheeks", "Tragedienne", "Wicked", "Accident", "Frank heart", "High tower",
+        "Stardust", "Tornado", "Big head", "Chewbacca", "Dreamy devil", "Mad Irishman", "Muffin lover", "Sarcasm Provider", "Toxic alien", "Odd duck", "Alpha"
+    ];
+    const FAMILY = [
+        "Abramson", "Albertson", "Baldwin", "Walkman", "Boolman", "Carroll", "Creighton", "Dickinson", "Dyson", "Eddington",
+        "Fane", "Fitzgerald", "Gill", "Gate", "Hailey", "Hodges", "Jacobson", "Jones", "Kelly", "Kennedy",
+        "Lawman", "Little", "MacAlister", "Michaelson", "Youmans", "Nathan", "Osborne", "Palmer", "Ralphs", "Smith", "Timmons"
+    ];
+    let familyRandom = 0;
+    let widgetIntervalOne = setInterval( function () {
+        RandomReviews();
+        clearInterval( widgetIntervalOne );
+    }, 13000);
+    let widgetIntervalTwo = setInterval( function () {
+        RandomReviews();
+    }, 120000);
+    function RandomReviews() {
+        $( '.cc-widget' ).removeClass( 'cc-widget--active' );
+        let myRandom = randomName();
+        let data = Math.round(Math.random() * 120 + 5 );
+        let name;
+        if( myRandom[1] === 0 ) {
+            if (myRandom[0] === 0) {
+                name = NAME_MALE[(myRandom[1])];
+            } else {
+                name = NAME_FEMALE[(myRandom[1])];
+            }
+            if (familyRandom === 3) {
+                name = `${name} ${FAMILY[(myRandom[2])].charAt(0)}`;
+            } else {
+                name = `${name} ${FAMILY[(myRandom[2])]}`;
+            }
+        } else {
+            name = NICK_NAME[(myRandom[2])];
+        }
+        setTimeout( function () {
+            $( '.cc-widget__name' ).html( name );
+            $( '.cc-widget__data' ).html( `${data} min ago` );
+            $( '.cc-widget' ).addClass( 'cc-widget--active' );
+        }, 1000 );
+    }
+    function randomName() {
+        let nameArr = [], myRandom;
+        for( let a = 0; a < 5; a++ ) {
+            if( a === 0 || a === 1 ) {
+                myRandom = Math.round( Math.random() );
+                nameArr[a] = myRandom;
+            } else if( a === 4 ) {
+                myRandom = Math.round(Math.random() * 3);
+                familyRandom = myRandom;
+            } else {
+                myRandom = Math.round(Math.random() * 30);
+                nameArr[a] = myRandom;
+            }
+        }
+        return nameArr;
+    }
+    $( '.cc-widget' ).click( function () {
+        $( '.cc-widget' ).removeClass( 'cc-widget--active' );
+    });
 });
