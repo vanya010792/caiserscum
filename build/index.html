@@ -9,9 +9,63 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap&subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <style type="text/css">
+        .cc-line--blue {
+            background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, #4268d3), to(transparent));
+            background: -webkit-linear-gradient(left, transparent 0%, #4268d3 50%, transparent 100%);
+            background: -o-linear-gradient(left, transparent 0%, #4268d3 50%, transparent 100%);
+            background: linear-gradient(left, transparent 0%, #4268d3 50%, transparent 100%);
+            background: -ms-linear-gradient(left, transparent 0%, #4268d3 50%, transparent 100%);
+        }
+        .cc-line--red {
+            background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, #e12021), to(transparent));
+            background: -webkit-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: -o-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: -ms-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+        }
+        .cc-text--red {
+            color: #ed0d0e;
+        }
+        .cc-text--blue {
+            color: #4268d3;
+        }
+        .cc-reviews__item::before, .cc-title--block::before {
+            background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, #e12021), to(transparent));
+            background: -webkit-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: -o-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: -ms-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+        }
+        .cc-btn__red {
+            color: #ed0d0e;
+            border: 2px solid #ed0d0e;
+        }
+        .cc-btn__red:hover {
+            background-color: #ed0d0e;
+        }
+        .cc-bg--red {
+            background-color: #ed0d0e;
+        }
+        .cc-bg-linear-red-yellow {
+            background: -webkit-gradient(linear, left bottom, left top, from(#ec0d0e), color-stop(58%, #ec0d0e), color-stop(83%, #f65807), to(#ffa200));
+            background: -webkit-linear-gradient(bottom, #ec0d0e 0%, #ec0d0e 58%, #f65807 83%, #ffa200 100%);
+            background: -o-linear-gradient(bottom, #ec0d0e 0%, #ec0d0e 58%, #f65807 83%, #ffa200 100%);
+            background: linear-gradient(bottom, #ec0d0e 0%, #ec0d0e 58%, #f65807 83%, #ffa200 100%);
+            background: -ms-linear-gradient(bottom, #ec0d0e 0%, #ec0d0e 58%, #f65807 83%, #ffa200 100%);
+        }
+        .cc-content>h2 {
+            color: #ed0d0e;
+        }
+        .cc-content>p {
+            color: #363636;
+        }
+        .cc-content>blockquote p {
+            color: #767676;
+        }
+    </style>
 </head>
 <body>
-<noindex>
 
 <main>
     <section class="cc-block cc-bnr">
@@ -24,16 +78,16 @@
                     <span>be anonymous</span>
                 </h1>
                 <a href="#review" class="anchor cc-bnr__btn cc-btn cc-btn__blue cc-btn__blue--big">
-                    <span class="cc-btn__blue_up">Оставить отзыв</span>
+                    <span class="cc-btn__blue_up">SEND A REVIEW</span>
                 </a>
             </div>
         </div>
     </section>
     <!---->
     <section class="cc-block cc-statistic">
-        <div class="cc-statistic__line"></div>
+        <div class="cc-statistic__line cc-line--red"></div>
         <div class="cc-container">
-            <div class="cc-statistic__wrap">
+            <div class="cc-statistic__wrap cc-bg-linear-red-yellow">
                 <div class="cc-statistic__desc">
                     <fieldset class="cc-statistic__fieldset cc-statistic__fieldset--top">
                         <legend>общее кол-во негативных ревью:</legend>
@@ -44,18 +98,18 @@
                 </div>
             </div>
         </div>
-        <div class="cc-statistic__line"></div>
+        <div class="cc-statistic__line cc-line--red"></div>
     </section>
     <!---->
     <section class="cc-block cc-advantages">
         <div class="cc-container">
-            <div class="cc-advantages__list">
+            <div class="cc-advantages__list cc-text--blue">
                 <div class="cc-advantages__item">
                     <div class="cc-advantages__img">
                         <img src="img/index/advantages-1.png" alt="">
                     </div>
                     <p class="cc-advantages__title">company</p>
-                    <p class="cc-advantages__quality">100 000$</p>
+                    <p class="cc-advantages__quality cc-text--red">100 000$</p>
                     <p class="cc-advantages__text">turnover</p>
                 </div>
                 <!---->
@@ -64,7 +118,7 @@
                         <img src="img/index/advantages-2.png" alt="">
                     </div>
                     <p class="cc-advantages__title">number of clients</p>
-                    <p class="cc-advantages__quality">60%</p>
+                    <p class="cc-advantages__quality cc-text--red">60%</p>
                     <p class="cc-advantages__text">
                         from the population
                         uses the services
@@ -76,24 +130,24 @@
                         <img src="img/index/advantages-3.png" alt="">
                     </div>
                     <p class="cc-advantages__title">wasted</p>
-                    <p class="cc-advantages__quality cc-advantages__quality--wind">&asymp;</p>
+                    <p class="cc-advantages__quality cc-advantages__quality--wind cc-text--red">&asymp;</p>
                     <p class="cc-advantages__text">
                         money
                     </p>
                 </div>
             </div>
-            <div class="cc-advantages__line"></div>
+            <div class="cc-advantages__line cc-line--blue"></div>
         </div>
     </section>
     <!---->
     <section class="cc-block cc-reviews">
         <div class="cc-container">
-            <div class="cc-reviews__wrap" itemscope itemtype="http://main-test.tk/sites/caiserscum/index.html">
+            <div class="cc-reviews__wrap">
                 <fieldset class="cc-reviews__review">
-                    <legend class="cc-reviews__legend">последние созданные ревью</legend>
+                    <legend class="cc-reviews__legend cc-text--red">RECENT REVIEWS</legend>
                     <div class="cc-reviews__review_wrap">
                         <div class="cc-reviews__list">
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -102,9 +156,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">25.06.2019</p>
+                                    <p>25.06.2019</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -114,7 +168,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -123,9 +177,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">25.06.2019</p>
+                                    <p>25.06.2019</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -135,7 +189,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -144,9 +198,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">25.06.2019</p>
+                                    <p>25.06.2019</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -156,7 +210,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -165,9 +219,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">25.06.2019</p>
+                                    <p>25.06.2019</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -177,7 +231,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -186,9 +240,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">25.06.2019</p>
+                                    <p>25.06.2019</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -200,10 +254,10 @@
                             <!---->
                         </div>
                         <div class="cc-reviews__btn cc-reviews__btn--1">
-                            <a href="" class="cc-btn cc-btn__red cc-btn__red--medium">More</a>
+                            <a href="" class="cc-btn cc-btn__red cc-btn__red--medium">READ MORE</a>
                         </div>
                         <div class="cc-reviews__list cc-reviews__list--2">
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -212,9 +266,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">25.06.2019</p>
+                                    <p>25.06.2019</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -224,7 +278,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -233,9 +287,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">25.06.2019</p>
+                                    <p>25.06.2019</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -245,7 +299,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -254,9 +308,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">25.06.2019</p>
+                                    <p>25.06.2019</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -266,7 +320,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -275,9 +329,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">25.06.2019</p>
+                                    <p>25.06.2019</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -287,7 +341,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -296,9 +350,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">25.06.2019</p>
+                                    <p>25.06.2019</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -316,10 +370,10 @@
                 </fieldset>
                 <!---->
                 <fieldset class="cc-reviews__review">
-                    <legend class="cc-reviews__legend">самые просматриваемые ревью</legend>
+                    <legend class="cc-reviews__legend cc-text--red">MOST VIEWED REVIEWS</legend>
                     <div class="cc-reviews__review_wrap">
                         <div class="cc-reviews__list">
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -328,9 +382,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">22.06.2017</p>
+                                    <p>22.06.2017</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -340,7 +394,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -349,31 +403,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">17.01.1999</p>
+                                    <p>17.01.1999</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
-                                    <b>Blair A, sold</b>
-                                    <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
-                                    <a href="">read more</a>
-                                </div>
-                                <div class="cc-reviews__option">
-                                    <p><img src="img/icon-eye.png" alt=""> 1421</p>
-                                    <a href="">read more</a>
-                                </div>
-                            </div>
-                            <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
-                                <div class="cc-reviews__rating">
-                                    <p class="cc-reviews__stars">
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="disable"></span>
-                                        <span class="disable"></span>
-                                    </p>
-                                    <p itemprop="data">17.01.1999</p>
-                                </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                     <a href="">read more</a>
@@ -384,7 +416,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -393,9 +425,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">17.01.1999</p>
+                                    <p>17.01.1999</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                     <a href="">read more</a>
@@ -406,7 +438,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -415,9 +447,31 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">17.01.1999</p>
+                                    <p>17.01.1999</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
+                                    <b>Blair A, sold</b>
+                                    <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
+                                    <a href="">read more</a>
+                                </div>
+                                <div class="cc-reviews__option">
+                                    <p><img src="img/icon-eye.png" alt=""> 1421</p>
+                                    <a href="">read more</a>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="cc-reviews__item">
+                                <div class="cc-reviews__rating">
+                                    <p class="cc-reviews__stars">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="disable"></span>
+                                        <span class="disable"></span>
+                                    </p>
+                                    <p>17.01.1999</p>
+                                </div>
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                     <a href="">read more</a>
@@ -429,10 +483,10 @@
                             </div>
                         </div>
                         <div class="cc-reviews__btn cc-reviews__btn--1">
-                            <a href="" class="cc-btn cc-btn__red cc-btn__red--medium">More</a>
+                            <a href="" class="cc-btn cc-btn__red cc-btn__red--medium">READ MORE</a>
                         </div>
                         <div class="cc-reviews__list cc-reviews__list--2">
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -441,9 +495,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">22.06.2017</p>
+                                    <p>22.06.2017</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                 </div>
@@ -453,7 +507,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -462,31 +516,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">17.01.1999</p>
+                                    <p>17.01.1999</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
-                                    <b>Blair A, sold</b>
-                                    <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
-                                    <a href="">read more</a>
-                                </div>
-                                <div class="cc-reviews__option">
-                                    <p><img src="img/icon-eye.png" alt=""> 1421</p>
-                                    <a href="">read more</a>
-                                </div>
-                            </div>
-                            <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
-                                <div class="cc-reviews__rating">
-                                    <p class="cc-reviews__stars">
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="disable"></span>
-                                        <span class="disable"></span>
-                                    </p>
-                                    <p itemprop="data">17.01.1999</p>
-                                </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                     <a href="">read more</a>
@@ -497,7 +529,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -506,9 +538,9 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">17.01.1999</p>
+                                    <p>17.01.1999</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                     <a href="">read more</a>
@@ -519,7 +551,7 @@
                                 </div>
                             </div>
                             <!---->
-                            <div class="cc-reviews__item" itemprop="itemListElement">
+                            <div class="cc-reviews__item">
                                 <div class="cc-reviews__rating">
                                     <p class="cc-reviews__stars">
                                         <span class="active"></span>
@@ -528,9 +560,31 @@
                                         <span class="disable"></span>
                                         <span class="disable"></span>
                                     </p>
-                                    <p itemprop="data">17.01.1999</p>
+                                    <p>17.01.1999</p>
                                 </div>
-                                <div class="cc-reviews__desc" itemprop="description">
+                                <div class="cc-reviews__desc">
+                                    <b>Blair A, sold</b>
+                                    <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
+                                    <a href="">read more</a>
+                                </div>
+                                <div class="cc-reviews__option">
+                                    <p><img src="img/icon-eye.png" alt=""> 1421</p>
+                                    <a href="">read more</a>
+                                </div>
+                            </div>
+                            <!---->
+                            <div class="cc-reviews__item">
+                                <div class="cc-reviews__rating">
+                                    <p class="cc-reviews__stars">
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="active"></span>
+                                        <span class="disable"></span>
+                                        <span class="disable"></span>
+                                    </p>
+                                    <p>17.01.1999</p>
+                                </div>
+                                <div class="cc-reviews__desc">
                                     <b>Blair A, sold</b>
                                     <span>"Lorem ipsum dolor sit amet, consectet doloribus eligendi eos eveniet facere harum..."</span>
                                     <a href="">read more</a>
@@ -555,7 +609,7 @@
     <article class="cc-anonymous-review">
         <div class="cc-container">
             <form action="" class="cc-anonymous-review__form">
-                <h2 class="cc-anonymous-review__title">Вы можете оставить отзыв анонимно</h2>
+                <h2 class="cc-anonymous-review__title cc-bg--red">LEAVE A REVIEW ANONYMOUSLY</h2>
                 <div class="cc-anonymous-review__input">
                     <input type="text" placeholder="Your Name">
                 </div>
@@ -564,7 +618,7 @@
                 </div>
                 <div class="cc-anonymous-review__btn">
                     <button type="submit" class="cc-btn cc-btn__blue cc-btn__blue--big">
-                        <span class="cc-btn__blue_up">Оставить отзыв</span>
+                        <span class="cc-btn__blue_up">SEND A REWIEV</span>
                     </button>
                 </div>
             </form>
@@ -573,15 +627,15 @@
     <!---->
     <article class="cc-block cc-mission">
         <div class="cc-container">
-            <h2 class="cc-title cc-title--block">Наша миссия </h2>
+            <h2 class="cc-title cc-title--block cc-text--red">OUR MISSION</h2>
             <div class="cc-mission__wrap">
                 <div class="cc-mission__img"><img src="img/index/mission-bg.png" alt=""></div>
                 <div class="cc-mission__desc">
                     <p>
-                        Тут должен быть какой-то текст, который даст нам хорошо оптимизацию в поисковиках. Тут должен быть какой-то текст, который даст нам хорошо оптимизацию в поисковиках. Тут должен быть какойто текст, который даст нам хорошо оптимизацию в поисковиках. Тут должен быть какой-то текст, который даст нам хорошо оптимизацию в поисковиках.
+                        At Kaiserskam you can leave a completely anonymous review and share your experience of using Kaiser Permanente Health Сare Сompany services. We fully care about the privacy of your personal data, so you can leave a response to the company Kaiser Permanente Health Сare Сompany completely anonymous. It does not matter what kind of Kaiser services you used - insurance, healthcare or you were simply not satisfied with the billing, it is important that you be heard. Every day we are confronted with a bad, low-quality service provided from big, well-known companies such as Kaiser Permanente Health Сare Сompany, but only together we can make a difference. If you do not tell about it today, then tomorrow the quality of your life will not be better, and the Kaiser Permanente Health Сare Сompany having millions of dollars in profits annually will only increase its capital, while maintaining a unacceptable level of service.
                     </p>
                     <p>
-                        Тут должен быть какой-то текст, который даст нам хорошо оптимизацию в поисковиках. Тут должен быть какой-то текст, который даст нам хорошо оптимизацию в поисковиках. Тут должен быть какойто текст, который даст нам хорошо оптимизацию в поисковиках. Тут должен быть какой-то текст, который даст нам хорошо оптимизацию в поисковиках.
+                        The information on our website is general in nature and is not intended as a substitute for competent legal advice. Kaiserscam makes no representation as to the accuracy of the information herein provided and assumes no liability for any damages or loss arising from the use thereof.
                     </p>
                 </div>
             </div>
@@ -704,6 +758,9 @@
 <div class="cc-widget">
     <p class="cc-widget__name">
     </p>
+    <p class="cc-widget__text">
+        review
+    </p>
     <p class="cc-widget__data">
     </p>
 </div>
@@ -714,8 +771,6 @@
         <p>Thanks for review</p>
     </div>
 </div>
-
-</noindex>
 
 </body>
 </html>

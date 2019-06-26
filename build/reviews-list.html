@@ -9,20 +9,74 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap&subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <style type="text/css">
+        .cc-line--blue {
+            background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, #4268d3), to(transparent));
+            background: -webkit-linear-gradient(left, transparent 0%, #4268d3 50%, transparent 100%);
+            background: -o-linear-gradient(left, transparent 0%, #4268d3 50%, transparent 100%);
+            background: linear-gradient(left, transparent 0%, #4268d3 50%, transparent 100%);
+            background: -ms-linear-gradient(left, transparent 0%, #4268d3 50%, transparent 100%);
+        }
+        .cc-line--red {
+            background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, #e12021), to(transparent));
+            background: -webkit-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: -o-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: -ms-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+        }
+        .cc-text--red {
+            color: #ed0d0e;
+        }
+        .cc-text--blue {
+            color: #4268d3;
+        }
+        .cc-reviews__item::before, .cc-title--block::before {
+            background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, #e12021), to(transparent));
+            background: -webkit-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: -o-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+            background: -ms-linear-gradient(left, transparent 0%, #e12021 50%, transparent 100%);
+        }
+        .cc-btn__red {
+            color: #ed0d0e;
+            border: 2px solid #ed0d0e;
+        }
+        .cc-btn__red:hover {
+            background-color: #ed0d0e;
+        }
+        .cc-bg--red {
+            background-color: #ed0d0e;
+        }
+        .cc-bg-linear-red-yellow {
+            background: -webkit-gradient(linear, left bottom, left top, from(#ec0d0e), color-stop(58%, #ec0d0e), color-stop(83%, #f65807), to(#ffa200));
+            background: -webkit-linear-gradient(bottom, #ec0d0e 0%, #ec0d0e 58%, #f65807 83%, #ffa200 100%);
+            background: -o-linear-gradient(bottom, #ec0d0e 0%, #ec0d0e 58%, #f65807 83%, #ffa200 100%);
+            background: linear-gradient(bottom, #ec0d0e 0%, #ec0d0e 58%, #f65807 83%, #ffa200 100%);
+            background: -ms-linear-gradient(bottom, #ec0d0e 0%, #ec0d0e 58%, #f65807 83%, #ffa200 100%);
+        }
+        .cc-content>h2 {
+            color: #ed0d0e;
+        }
+        .cc-content>p {
+            color: #363636;
+        }
+        .cc-content>blockquote p {
+            color: #767676;
+        }
+    </style>
 </head>
 <body>
-<noindex>
 
 <div class="cc-crumbs">
     <div class="cc-container">
         <div class="cc-crumbs__wrap">
-            <hgroup class="cc-crumbs__title">
+            <hgroup class="cc-crumbs__title cc-text--red">
                 <h1>Страница отзыва</h1>
                 <h2>Let us Help !</h2>
             </hgroup>
             <div class="cc-crumbs__nav">
                 <div class="cc-crumbs__text">You are here :</div>
-                <a href="" class="cc-crumbs__link"> Home</a>
+                <a href="" class="cc-crumbs__link cc-text--red"> Home</a>
                 <div class="cc-crumbs__separator">></div>
                 <div class="cc-crumbs__text">Страница отзыва</div>
             </div>
@@ -47,14 +101,14 @@
                     </p>
                 </div>
             </div>
-            <div class="cc-reviews-list" itemscope itemType="http://main-test.tk/sites/caiserscum/reviews-list.html">
+            <div class="cc-reviews-list">
                 <div class="cc-reviews-list__item">
                     <div class="cc-reviews-list__title">
-                        <h2 class="cc-reviews-list__name" itemprop="title">
+                        <h2 class="cc-reviews-list__name">
                             Scientists: lipoic acid has promise in
                             treating Alzheimer's disease
                         </h2>
-                        <p class="cc-reviews-list__data" itemprop="data">
+                        <p class="cc-reviews-list__data">
                             23/03/2019
                         </p>
                     </div>
@@ -265,8 +319,6 @@
     <p class="cc-widget__data">
     </p>
 </div>
-
-</noindex>
 
 </body>
 </html>

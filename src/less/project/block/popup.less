@@ -199,7 +199,7 @@
 }
 .cc-widget {
   position: fixed;
-  right: -300px;
+  right: -360px;
   top: 100px;
   height: 90px;
   transition: .5s;
@@ -208,7 +208,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 280px;
+  width: 340px;
   background-color: #ffffff;
   box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   cursor: pointer;
@@ -219,11 +219,18 @@
     font-size: 16px;
     font-weight: @FW-Bold;
     color: @C-red;
-    width: 49%;
+    width: 39%;
+    text-align: center;
+  }
+  &__text {
+    padding: 0 5px;
+    width: 20%;
+    color: @C-textBlack;
+    font-size: 16px;
     text-align: center;
   }
   &__data {
-    width: 49%;
+    width: 39%;
     text-align: center;
     font-weight: @FW-Light;
     color: @C-textGray;
