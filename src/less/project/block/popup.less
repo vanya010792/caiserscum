@@ -199,16 +199,16 @@
 }
 .cc-widget {
   position: fixed;
-  right: -360px;
-  top: 100px;
-  height: 90px;
+  right: -320px;
+  top: 40px;
+  height: 60px;
   transition: .5s;
-  padding: 5px 20px;
+  padding: 5px 10px;
   border-left: 2px solid @C-red;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 340px;
+  width: 300px;
   background-color: #ffffff;
   box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   cursor: pointer;
@@ -216,24 +216,26 @@
     right: 0;
   }
   &__name {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: @FW-Bold;
     color: @C-red;
-    width: 39%;
+    flex: 1 1 auto;
     text-align: center;
   }
   &__text {
-    padding: 0 5px;
-    width: 20%;
+    margin: 0 5px;
+    flex: 0 0 60px;
+    width: 60px;
     color: @C-textBlack;
-    font-size: 16px;
+    font-size: 13px;
     text-align: center;
   }
   &__data {
-    width: 39%;
+    flex: 1 1 auto;
     text-align: center;
     font-weight: @FW-Light;
     color: @C-textGray;
+    font-size: 14px;
   }
 }
 .cc-success-review {

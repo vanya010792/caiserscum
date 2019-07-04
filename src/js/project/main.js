@@ -6,7 +6,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         $('body,html').animate({scrollTop: top}, 1000);
     });
 
-    $( '.cc-panel-btn a' ).click( function (e) {
+    $( '.cc-panel-btn .js-link' ).click( function (e) {
         e.preventDefault();
         $( 'body' ).addClass( 'body-overflow' );
         $( '.cc-popup' ).fadeIn();
@@ -64,7 +64,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         $( '.cc-reviews__btn--1' ).click( function (e) {
             e.preventDefault();
             $( this ).fadeOut();
-            $( this ).siblings( '.cc-reviews__list--2' ).slideDown();
+            $( this ).siblings( '.cc-reviews__list' ).children( '.cc-reviews__list--2' ).slideDown();
             $( this ).siblings( '.cc-reviews__btn--2' ).fadeIn();
         });
     }
@@ -96,11 +96,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
     }, 13000);
     let widgetIntervalTwo = setInterval( function () {
         RandomReviews();
-    }, 120000);
+    }, 150000);
     function RandomReviews() {
         $( '.cc-widget' ).removeClass( 'cc-widget--active' );
         let myRandom = randomName();
-        let data = Math.round(Math.random() * 120 + 5 );
+        let data = Math.round(Math.random() * 9 );
+        if( data < 2 ) {
+            data += 2
+        }
         let name;
         if( myRandom[1] === 0 ) {
             if (myRandom[0] === 0) {
@@ -118,7 +121,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         }
         setTimeout( function () {
             $( '.cc-widget__name' ).html( name );
-            $( '.cc-widget__data' ).html( `${data} min ago` );
+            $( '.cc-widget__data' ).html( `${data} hour ago` );
             $( '.cc-widget' ).addClass( 'cc-widget--active' );
         }, 1000 );
     }

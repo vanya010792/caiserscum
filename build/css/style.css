@@ -41,7 +41,7 @@ ul {
   margin: 0 auto;
 }
 .cc-block {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .body-overflow {
   overflow: hidden;
@@ -576,7 +576,7 @@ ul {
   font-size: 27px;
 }
 .cc-btn__blue--big .cc-btn__blue_up {
-  padding: 30px 90px;
+  padding: 20px 65px;
 }
 .cc-btn__blue--medium {
   font-size: 21px;
@@ -746,28 +746,28 @@ ul {
 }
 .cc-bnr__name {
   display: inline-block;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 140px;
+  margin-bottom: 90px;
   color: #ffffff;
 }
 .cc-bnr__name:hover {
   color: #4268d3;
 }
 .cc-bnr__title {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .cc-bnr__title > * {
   display: block;
 }
 .cc-bnr__title b {
-  font-size: 40px;
+  font-size: 35px;
 }
 .cc-bnr__title p {
-  font-size: 71px;
+  font-size: 58px;
 }
 .cc-bnr__title span {
-  font-size: 49px;
+  font-size: 39px;
 }
 .cc-bnr__btn {
   display: inline-block;
@@ -785,10 +785,10 @@ ul {
   width: 100%;
   margin: -2px 0;
   border-bottom: 10px solid #8d0e0e;
-  padding: 40px 80px;
+  padding: 20px 40px;
 }
 .cc-statistic__desc {
-  height: 130px;
+  height: 100px;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -798,14 +798,14 @@ ul {
   color: #ffffff;
 }
 .cc-statistic__fieldset--top {
-  font-size: 24px;
+  font-size: 22px;
   border: 2px solid #ffffff;
   border-bottom: none;
-  padding-bottom: 90px;
+  padding-bottom: 60px;
 }
 .cc-statistic__fieldset--bot {
-  margin-top: -45px;
-  font-size: 72px;
+  margin-top: -33px;
+  font-size: 54px;
   border: none;
   border-top: 2px solid #ffffff;
 }
@@ -825,9 +825,9 @@ ul {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 .cc-advantages__item {
@@ -835,23 +835,20 @@ ul {
   text-align: center;
 }
 .cc-advantages__img {
-  margin-left: -5%;
+  margin-left: -3%;
   display: inline-block;
+  width: 60%;
 }
 .cc-advantages__title {
-  margin-top: -50px;
+  margin-top: -40px;
   font-weight: 500;
 }
 .cc-advantages__quality {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700;
 }
-.cc-advantages__quality--wind {
-  font-size: 42px;
-  line-height: 1;
-}
 .cc-advantages__text {
-  font-size: 20px;
+  font-size: 16px;
 }
 .cc-reviews__wrap {
   display: -webkit-box;
@@ -1104,7 +1101,6 @@ ul {
   padding: 25px;
   font-size: 24px;
   color: #8b8b8b;
-  resize: none;
 }
 .cc-anonymous-review__btn {
   width: 100%;
@@ -1143,6 +1139,7 @@ ul {
   position: relative;
   padding-bottom: 25px;
   margin-bottom: 25px;
+  text-align: justify;
 }
 .cc-mission__desc p::before {
   content: '';
@@ -1520,13 +1517,13 @@ ul {
 }
 .cc-widget {
   position: fixed;
-  right: -360px;
-  top: 100px;
-  height: 90px;
+  right: -320px;
+  top: 40px;
+  height: 60px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  padding: 5px 20px;
+  padding: 5px 10px;
   border-left: 2px solid #ed0d0e;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1540,7 +1537,7 @@ ul {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 340px;
+  width: 300px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
@@ -1550,24 +1547,35 @@ ul {
   right: 0;
 }
 .cc-widget__name {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: #ed0d0e;
-  width: 39%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   text-align: center;
 }
 .cc-widget__text {
-  padding: 0 5px;
-  width: 20%;
+  margin: 0 5px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 60px;
+      -ms-flex: 0 0 60px;
+          flex: 0 0 60px;
+  width: 60px;
   color: #363636;
-  font-size: 16px;
+  font-size: 13px;
   text-align: center;
 }
 .cc-widget__data {
-  width: 39%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   text-align: center;
   font-weight: 300;
   color: #767676;
+  font-size: 14px;
 }
 .cc-success-review {
   position: fixed;
