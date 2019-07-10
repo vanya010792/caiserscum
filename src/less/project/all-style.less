@@ -211,6 +211,40 @@
       margin-bottom: 0;
     }
   }
+  &>table {
+    margin-bottom: 30px;
+    font-size: 14px;
+    & tr {
+      & td, & th {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+    }
+  }
+  &>ul {
+    margin-bottom: 30px;
+    & li {
+      position: relative;
+      line-height: 1.5;
+      font-size: 16px;
+      font-weight: @FW-Medium;
+      margin-bottom: 10px;
+      padding-left: 25px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 8px;
+        height: 8px;
+        background-color: @C-blue;
+        border-radius: 50%;
+      }
+    }
+  }
   & .float-left {
     float: left;
     width: 50%;
