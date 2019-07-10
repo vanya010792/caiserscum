@@ -212,13 +212,16 @@
   background-color: #ffffff;
   box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   &--active {
     right: 0;
   }
   &__name {
     font-size: 14px;
     font-weight: @FW-Bold;
-    color: @C-red;
+    color: #ffffff;
     flex: 1 1 auto;
     text-align: center;
   }
@@ -226,7 +229,7 @@
     margin: 0 5px;
     flex: 0 0 60px;
     width: 60px;
-    color: @C-textBlack;
+    color: #ffffff;
     font-size: 13px;
     text-align: center;
   }
@@ -234,32 +237,48 @@
     flex: 1 1 auto;
     text-align: center;
     font-weight: @FW-Light;
-    color: @C-textGray;
+    color: #ffffff;
     font-size: 14px;
   }
 }
 .cc-success-review {
   position: fixed;
-  top: 200px;
+  top: 0;
   right: 0;
-  background-color: #ffffff;
-  box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
-  height: 90px;
-  transition: .5s;
-  padding: 5px 20px;
-  border-left: 2px solid @C-green;
-  width: 280px;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 99;
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 0,0,0,.7 );
+    cursor: pointer;
+  }
   &--active {
-    right: -300px;
+    display: block;
   }
   &__wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: @C-green;
-    font-weight: @FW-Bold;
+    text-align: center;
+    &>div {
+      position: relative;
+      margin-top: 20%;
+      max-width: 300px;
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: @C-green;
+      font-weight: @FW-Bold;
+      background-color: #ffffff;
+      padding: 40px;
+      z-index: 100;
+    }
     & p {
       margin-left: 10px;
     }

@@ -56,9 +56,9 @@ document.addEventListener( 'DOMContentLoaded', function () {
         }
     });
 
-    $( '.cc-success-review' ).click( function () {
-        $( this ).toggleClass('cc-success-review--active');
-    });
+    // $( '.cc-success-review' ).click( function () {
+    //     $( this ).toggleClass('cc-success-review--active');
+    // });
 
     if( document.querySelector( '.cc-reviews__btn--1' ) ) {
         $( '.cc-reviews__btn--1' ).click( function (e) {

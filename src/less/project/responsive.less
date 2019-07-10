@@ -126,6 +126,9 @@
       padding: 40px 35px;
       margin-bottom: 15px;
     }
+    &__file {
+      margin-bottom: 15px;
+    }
     &__input {
       margin-bottom: 15px;
       & input {
@@ -163,6 +166,9 @@
   }
 }
 @media ( max-width: 768px ) {
+  .cc-pagination {
+    margin-top: 20px;
+  }
   .cc-statistic {
     &__desc {
       height: 110px;
@@ -218,6 +224,14 @@
     &__title {
       font-size: 22px;
       padding: 30px 25px;
+    }
+    &__file {
+      & input {
+        font-size: 12px;
+        &::-webkit-file-upload-button {
+          padding: 5px;
+        }
+      }
     }
     &__input {
       & input {

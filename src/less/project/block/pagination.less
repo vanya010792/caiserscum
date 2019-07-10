@@ -1,0 +1,69 @@
+.cc-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  &__link {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid @C-borderGray;
+    border-radius: 5px;
+    margin: 0 3px;
+    transition: .3s;
+    &:hover {
+      background-color: @C-red;
+      border: 1px solid @C-red;
+      color: #ffffff;
+    }
+  }
+  &__number {
+    font-size: 14px;
+    font-weight: normal;
+    color: @C-borderGray;
+    &--active {
+      color: #ffffff;
+      cursor: default;
+      pointer-events: none;
+      background-color: @C-red;
+      border: 1px solid @C-red;
+    }
+  }
+  &__arrow {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-left: 2px solid @C-borderGray;
+      border-bottom: 2px solid @C-borderGray;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transition: .3s;
+    }
+    &--prev {
+      &::before {
+        left: 3px;
+        right: 0;
+        transform: rotate(45deg);
+      }
+    }
+    &--next {
+      &::before {
+        left: 0;
+        right: 3px;
+        transform: rotate(-135deg);
+      }
+    }
+    &:hover {
+      &::before {
+        border-left: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+      }
+    }
+  }
+}

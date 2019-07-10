@@ -5,7 +5,7 @@
     align-items: flex-start;
   }
   &__review {
-    width: 45%;
+    width: 48%;
     border: 1px solid @C-borderGray;
     padding: 47px 10px 35px 10px;
     &_wrap {
@@ -13,7 +13,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      max-width: 400px;
+      max-width: 450px;
       width: 100%;
       margin: 0 auto;
       margin-top: -27px;
@@ -41,7 +41,7 @@
     }
   }
   &__item {
-    max-width: 290px;
+    max-width: 330px;
     width: 100%;
     margin: 0 auto;
     padding-bottom: 15px;
@@ -67,38 +67,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 10px;
+    font-size: 13px;
     color: @C-textGray;
     margin-bottom: 5px;
-    & p {
-      height: 10px;
-    }
   }
   &__stars {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-right: 5px;
-    & span {
-      width: 10px;
-      height: 10px;
-      margin-right: 3px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      &:last-child {
-        margin-right: 0;
-      }
-      &.active {
-        background-image: url(../img/icon-star-active.svg);
-      }
-      &.disable {
-        background-image: url(../img/icon-star-disable.svg);
-      }
+    & img {
+      height: 30px;
     }
+    //& span {
+    //  width: 10px;
+    //  height: 10px;
+    //  margin-right: 3px;
+    //  background-size: cover;
+    //  background-position: center;
+    //  background-repeat: no-repeat;
+    //  &:last-child {
+    //    margin-right: 0;
+    //  }
+    //  &.active {
+    //    background-image: url(../img/icon-star-active.svg);
+    //  }
+    //  &.disable {
+    //    background-image: url(../img/icon-star-disable.svg);
+    //  }
+    //}
   }
   &__desc {
-    font-size: 10px;
+    font-size: 13px;
     margin-bottom: 5px;
   }
   &__option {
@@ -106,20 +106,20 @@
     justify-content: space-between;
     align-items: center;
     & p {
-      font-size: 11px;
+      font-size: 13px;
       color: @C-textGray;
       display: flex;
       justify-content: flex-start;
       align-items: center;
       & img {
-        width: 16px;
+        width: 18px;
         margin-right: 5px;
       }
     }
     & a {
       color: @C-blue;
       font-weight: @FW-Bold;
-      font-size: 13px;
+      font-size: 15px;
       &:hover {
         color: @C-textGray;
       }
