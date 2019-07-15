@@ -79,27 +79,18 @@
     & img {
       height: 30px;
     }
-    //& span {
-    //  width: 10px;
-    //  height: 10px;
-    //  margin-right: 3px;
-    //  background-size: cover;
-    //  background-position: center;
-    //  background-repeat: no-repeat;
-    //  &:last-child {
-    //    margin-right: 0;
-    //  }
-    //  &.active {
-    //    background-image: url(../img/icon-star-active.svg);
-    //  }
-    //  &.disable {
-    //    background-image: url(../img/icon-star-disable.svg);
-    //  }
-    //}
   }
   &__desc {
     font-size: 13px;
     margin-bottom: 5px;
+    & .text {
+      & b {
+        font-weight: @FW-Reg;
+      }
+    }
+    & .drop {
+      display: none;
+    }
   }
   &__option {
     display: flex;
@@ -116,12 +107,16 @@
         margin-right: 5px;
       }
     }
-    & a {
+    & .link {
       color: @C-blue;
       font-weight: @FW-Bold;
       font-size: 15px;
+      cursor: pointer;
       &:hover {
         color: @C-textGray;
+      }
+      &.our-review {
+        display: none;
       }
     }
   }

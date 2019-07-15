@@ -46,19 +46,17 @@ document.addEventListener( 'DOMContentLoaded', function () {
         }
     });
 
-    $( '.cc-faq__title' ).click( function () {
-        if( $(this).hasClass( 'cc-faq__title--active' ) ) {
-            $(this).siblings('.cc-faq__desc').slideUp();
-            $(this).removeClass( 'cc-faq__title--active' );
-        } else {
-            $(this).siblings('.cc-faq__desc').slideDown();
-            $(this).addClass( 'cc-faq__title--active' );
-        }
-    });
-
-    // $( '.cc-success-review' ).click( function () {
-    //     $( this ).toggleClass('cc-success-review--active');
-    // });
+    if( document.querySelector( '.cc-faq__title' ) ) {
+        $('.cc-faq__title').click(function () {
+            if ($(this).hasClass('cc-faq__title--active')) {
+                $(this).siblings('.cc-faq__desc').slideUp();
+                $(this).removeClass('cc-faq__title--active');
+            } else {
+                $(this).siblings('.cc-faq__desc').slideDown();
+                $(this).addClass('cc-faq__title--active');
+            }
+        });
+    }
 
     if( document.querySelector( '.cc-reviews__btn--1' ) ) {
         $( '.cc-reviews__btn--1' ).click( function (e) {
@@ -66,6 +64,12 @@ document.addEventListener( 'DOMContentLoaded', function () {
             $( this ).fadeOut();
             $( this ).siblings( '.cc-reviews__list' ).children( '.cc-reviews__list--2' ).slideDown();
             $( this ).siblings( '.cc-reviews__btn--2' ).fadeIn();
+        });
+        $( '.cc-reviews__option .read-more' ).click( function () {
+            $( this ).css({ display: 'none' });
+            $( this ).parent().siblings( '.cc-reviews__desc' ).children( '.drop' ).css({ display: 'inline' });
+            $( this ).parent().siblings( '.cc-reviews__desc' ).children( '.text' ).children( 'b' ).css({ display: 'none' });
+            $( this ).siblings( '.our-review' ).css({ display: 'block' });
         });
     }
 

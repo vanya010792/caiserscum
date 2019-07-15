@@ -988,6 +988,12 @@ ul {
   font-size: 13px;
   margin-bottom: 5px;
 }
+.cc-reviews__desc .text b {
+  font-weight: 400;
+}
+.cc-reviews__desc .drop {
+  display: none;
+}
 .cc-reviews__option {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1022,13 +1028,17 @@ ul {
   width: 18px;
   margin-right: 5px;
 }
-.cc-reviews__option a {
+.cc-reviews__option .link {
   color: #4268d3;
   font-weight: 700;
   font-size: 15px;
+  cursor: pointer;
 }
-.cc-reviews__option a:hover {
+.cc-reviews__option .link:hover {
   color: #767676;
+}
+.cc-reviews__option .link.our-review {
+  display: none;
 }
 .cc-reviews__btn {
   width: 100%;
@@ -1204,6 +1214,7 @@ ul {
 }
 .cc-navigation__name:hover {
   color: #4268d3;
+  opacity: 0.65;
 }
 .cc-navigation__nav {
   display: -webkit-box;
