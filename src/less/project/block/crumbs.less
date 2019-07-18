@@ -13,11 +13,23 @@
     & h1 {
       text-transform: uppercase;
     }
-    & h2 {
-      font-size: 14px;
-      color: @C-textGray;
-      margin-top: 15px;
-      font-weight: @FW-Light;
+    &--reviews {
+      font-size: 12px;
+      & h1 {
+        text-transform: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        & p {
+          margin-right: 10px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          & img {
+            margin-right: 5px;
+          }
+        }
+      }
     }
   }
   &__nav {

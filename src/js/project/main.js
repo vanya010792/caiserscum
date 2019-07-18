@@ -97,10 +97,10 @@ document.addEventListener( 'DOMContentLoaded', function () {
     let widgetIntervalOne = setInterval( function () {
         RandomReviews();
         clearInterval( widgetIntervalOne );
-    }, 13000);
+    }, 1000);
     let widgetIntervalTwo = setInterval( function () {
         RandomReviews();
-    }, 150000);
+    }, 120000);
     function RandomReviews() {
         $( '.cc-widget' ).removeClass( 'cc-widget--active' );
         let myRandom = randomName();
@@ -125,7 +125,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         }
         setTimeout( function () {
             $( '.cc-widget__name' ).html( name );
-            $( '.cc-widget__data' ).html( `${data} hour ago` );
+            $( '.cc-widget__data' ).html( `${data} hours ago` );
             $( '.cc-widget' ).addClass( 'cc-widget--active' );
         }, 1000 );
     }

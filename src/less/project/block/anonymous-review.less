@@ -36,6 +36,7 @@
   }
   &__file {
     margin-bottom: 25px;
+    text-align: left;
     & input {
       cursor: pointer;
       font-weight: @FW-Medium;
@@ -70,6 +71,16 @@
       padding: 25px;
       font-size: 24px;
       color: #8b8b8b;
+    }
+  }
+  & .g-recaptcha {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    &>* {
+      margin: 0 auto;
+      max-width: 340px;
+      width: 100% !important;
     }
   }
   &__btn {
