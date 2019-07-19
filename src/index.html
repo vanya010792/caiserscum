@@ -539,7 +539,7 @@
                     <input type="text" placeholder="Your Name( optional )">
                 </div>
                 <div class="cc-anonymous-review__textarea">
-                    <textarea required></textarea>
+                    <textarea required maxlength="10000"></textarea>
                 </div>
                 <div class="cc-anonymous-review__file">
                     <input type="file">
@@ -627,12 +627,12 @@
                 </div>
                 <form action="" class="cc-popup__form cc-popup__form--login">
                     <div class="cc-popup__input">
-                        <p>Name</p>
-                        <input type="text">
+                        <p>Email</p>
+                        <input type="email" required>
                     </div>
                     <div class="cc-popup__input">
                         <p>Password</p>
-                        <input type="password">
+                        <input type="password" required>
                     </div>
                     <div class="cc-popup__btn">
                         <button type="submit" class="cc-btn cc-btn__blue cc-btn__blue--medium">Войти</button>
@@ -645,15 +645,15 @@
                     </div>
                     <div class="cc-popup__input">
                         <p>Email</p>
-                        <input type="email">
+                        <input type="email" required>
                     </div>
                     <div class="cc-popup__input">
                         <p>Password</p>
-                        <input type="password">
+                        <input type="password" required>
                     </div>
                     <div class="cc-popup__input">
                         <p>Repeat password</p>
-                        <input type="password">
+                        <input type="password" required>
                     </div>
                     <div class="cc-popup__btn">
                         <button type="submit" class="cc-btn cc-btn__blue cc-btn__blue--medium">Регистрация</button>
@@ -668,7 +668,7 @@
     <p class="cc-widget__name">
     </p>
     <p class="cc-widget__text">
-        leave a review
+        left a review
     </p>
     <p class="cc-widget__data">
     </p>
